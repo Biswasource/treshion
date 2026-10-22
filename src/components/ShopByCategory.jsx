@@ -74,7 +74,7 @@ const ShopByCategory = ({ onSelectCategory }) => {
         </motion.div>
 
         {/* 5-Column Apparel Cutouts Row with Framer Motion Staggered Hover & Scroll Reveal */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8 pt-4 pb-2">
+        <div className="flex overflow-x-auto no-scrollbar gap-4 sm:grid sm:grid-cols-5 sm:gap-8 pt-4 pb-2 snap-x">
           {CATEGORY_CUTOUTS.map((cat, index) => (
             <motion.div
               key={cat.id}
@@ -87,9 +87,9 @@ const ShopByCategory = ({ onSelectCategory }) => {
                 const el = document.getElementById('trending');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex flex-col items-center group cursor-pointer"
+              className="flex-shrink-0 w-[130px] sm:w-auto flex flex-col items-center group cursor-pointer snap-start"
             >
-              <h3 className="font-heading font-bold text-xs sm:text-sm tracking-[0.16em] uppercase text-center text-[#111111] mb-4 group-hover:text-[#d95338] transition-colors">
+              <h3 className="font-heading font-bold text-xs sm:text-sm tracking-[0.16em] uppercase text-center text-[#111111] mb-2 sm:mb-4 group-hover:text-[#d95338] transition-colors">
                 {cat.name}
               </h3>
 

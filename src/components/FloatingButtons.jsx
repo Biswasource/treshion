@@ -20,7 +20,7 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 select-none pointer-events-none">
+    <div className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2 sm:gap-3 select-none pointer-events-none">
       
       {/* Back to Top Button with Framer Motion Spring Pop */}
       <AnimatePresence>
@@ -34,9 +34,9 @@ const FloatingButtons = () => {
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="w-10 h-10 bg-[#d95338] text-white flex items-center justify-center shadow-lg hover:bg-[#b83f27] focus:outline-none pointer-events-auto"
+            className="w-8 h-8 sm:w-10 sm:h-10 bg-[#d95338] text-white flex items-center justify-center shadow-lg hover:bg-[#b83f27] focus:outline-none pointer-events-auto"
           >
-            <ArrowUp className="w-5 h-5 stroke-[2.5]" />
+            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -48,10 +48,10 @@ const FloatingButtons = () => {
         transition={{ type: "spring", stiffness: 400, damping: 25 }}
         onClick={() => setIsStoresOpen(true)}
         aria-label="View stores"
-        className="bg-white text-gray-800 border border-gray-200/90 shadow-xl px-3.5 py-2.5 rounded-md flex flex-col items-center justify-center hover:shadow-2xl hover:border-black group focus:outline-none pointer-events-auto"
+        className="bg-white text-gray-800 border border-gray-200/90 shadow-xl px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 rounded-md flex flex-col items-center justify-center hover:shadow-2xl hover:border-black group focus:outline-none pointer-events-auto"
       >
-        <Store className="w-5 h-5 text-gray-700 group-hover:text-black transition-colors stroke-[1.8]" />
-        <span className="text-[10px] font-bold tracking-wider uppercase mt-1 text-gray-700 group-hover:text-black">
+        <Store className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 group-hover:text-black transition-colors stroke-[1.8]" />
+        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider uppercase mt-0.5 sm:mt-1 text-gray-700 group-hover:text-black">
           Stores
         </span>
       </motion.button>
